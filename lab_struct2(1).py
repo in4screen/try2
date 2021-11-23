@@ -267,3 +267,18 @@ def BFS(r,c,arr): # r, c: координати початку обходу
 arr = []
 BFS(0,1)
 print(a)
+
+class Rectangle:
+    def __init__(self,length=0,width=0):
+        self.length=length
+        self.width=width
+    def square(self):
+        return self.length * self.width
+    def perimeter(self):
+        return (self.length + self.width) * 2
+a=int(input('введіть довжину прямокутника:'))
+b=int(input('введіть ширину прямокутника:'))
+s=Rectangle(a,b)
+print(s.length, s.width)
+print(s.square())
+print(s.perimeter())
