@@ -332,3 +332,54 @@ def BFS(r,c,arr): # r, c: координати початку обходу
 arr = []
 BFS(0,1)
 print(a)
+
+class Multiplicity:
+    def __init__(self, x=0, y=0):
+        self.__x=x
+        self.__y=y
+    @property
+    def x(self):
+        return self.__x
+    @x.setter
+    def x(self, x):
+        self.__x=x
+    @property
+    def y(self):
+        return self.__y
+    @y.setter
+    def y(self, y):
+        self.__y=y
+    def multiplicity(self):
+        return self.x % self.y == 0
+x= int(input('Введіть перше число:'))
+y= int(input('Введіть друге число:'))
+a=Multiplicity(x, y)
+if a.multiplicy(())print()
+
+f = open('abc.txt', 'r')
+
+# rmax=len(a)
+# cmax=len(a[0]) # реальні розміри лабіринта
+def BFS(r,c,arr): # r, c: координати початку обходу
+    que=[]
+    if arr[r][c]=0 # перетворюємо клітинку на стіну
+    que.append([r,c])
+    while len(que)>0:
+        tmp=que.pop(0)
+        r=tmp[0]
+        c=tmp[1]
+    if ((c+1)<cmax) and (a[r][c+1]==1):
+        que.append([r,c+1])
+        a[r][c+1]=0 #якщо можна йти вправо, то йдемо
+    if ((r+1)<rmax) and (a[r+1][c]==1):
+        que.append([r+1,c])
+        a[r+1][c]=0 # якщо можна йти вниз, то йдемо
+        if ((c-1)>=0) and (a[r][c-1]==1):
+            que.append([r,c-1])
+            a[r][c-1]=0 # якщо можна йти вліво, то йдемо
+        if ((r-1)>=0) and (a[r-1][c]==1):
+            que.append([r-1,c])
+            a[r-1][c]=0 # якщо можна йти вгору, то йдемо
+arr = []
+BFS(0,1)
+print(a)
