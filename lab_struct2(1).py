@@ -158,6 +158,8 @@ class OneWayList:
 # self.next = next
 # self.prev = prev
 #zxc
+#tilted
+#untilted
 class TwoWayList:
     def __init__(self):
         self.length = 0
