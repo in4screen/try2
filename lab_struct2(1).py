@@ -93,7 +93,6 @@ class TwoWayList:
         
 
 
-
 one = OneWayList()
 two = TwoWayList()
 
@@ -111,3 +110,4 @@ two.add_q('4')
 print(two.length)
 print(two.__str__())
 print(two.search_node(0))
+print('hllo wrld')
