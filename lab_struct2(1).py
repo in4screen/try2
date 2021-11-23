@@ -157,7 +157,6 @@ class OneWayList:
 # self.data = data
 # self.next = next
 # self.prev = prev
-#zxc
 #tilted
 #untilted
 class TwoWayList:
