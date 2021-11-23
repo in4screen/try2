@@ -304,3 +304,31 @@ T=Teenager(a,b,c)
 print(A.height, A.weight, T.years)
 print(A.index())
 print(T.index())
+
+f = open('abc.txt', 'r')
+
+# rmax=len(a)
+# cmax=len(a[0]) # реальні розміри лабіринта
+def BFS(r,c,arr): # r, c: координати початку обходу
+    que=[]
+    if arr[r][c]=0 # перетворюємо клітинку на стіну
+    que.append([r,c])
+    while len(que)>0:
+        tmp=que.pop(0)
+        r=tmp[0]
+        c=tmp[1]
+    if ((c+1)<cmax) and (a[r][c+1]==1):
+        que.append([r,c+1])
+        a[r][c+1]=0 #якщо можна йти вправо, то йдемо
+    if ((r+1)<rmax) and (a[r+1][c]==1):
+        que.append([r+1,c])
+        a[r+1][c]=0 # якщо можна йти вниз, то йдемо
+        if ((c-1)>=0) and (a[r][c-1]==1):
+            que.append([r,c-1])
+            a[r][c-1]=0 # якщо можна йти вліво, то йдемо
+        if ((r-1)>=0) and (a[r-1][c]==1):
+            que.append([r-1,c])
+            a[r-1][c]=0 # якщо можна йти вгору, то йдемо
+arr = []
+BFS(0,1)
+print(a)
