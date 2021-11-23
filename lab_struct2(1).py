@@ -282,3 +282,25 @@ s=Rectangle(a,b)
 print(s.length, s.width)
 print(s.square())
 print(s.perimeter())
+
+class Adult:
+    def __init__(self,height=0,weight=0):
+        self.height=height
+        self.weight=weight
+    def index(self):
+        return (self.weight/(self.weight*self.weight))
+class Teenager(Adult):
+    def __init__(self,height=0,weight=0,years=0):
+        self.height=height
+        self.weight=weight
+        self.years=years
+    def index(self):
+        return Adult.index(self) -((18-self.years)/10)
+a=float(input('Введіть вагу тіла людини:'))
+b=float(input('Введіть зріст людини:'))
+c=int(input('Введіть скільки років підлітку:'))
+A=Adult(a,b)
+T=Teenager(a,b,c)
+print(A.height, A.weight, T.years)
+print(A.index())
+print(T.index())
