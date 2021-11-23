@@ -229,3 +229,13 @@ def Ackerman (n, m):
             if n > 0 and m > 0:
                 return Ackerman(n-1,Ackerman(n,m-1))
 print(Ackerman(3, 2))
+
+import math
+def C(m,n):
+    if (m==0 and n>0) or (m==n and n>=0):
+         return 1
+    if m>n and n>=0:
+        return 0
+    else:
+        return C(((math.factorial(n-1))/(math.factorial(m-1) * math.factorial((n-1)-(m-1))) + C(((math.factorial(n-1))/(math.factorial(m) * math.factorial((n-1)-m)))
+print(1)
